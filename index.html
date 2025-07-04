@@ -67,11 +67,15 @@
 
         .sliding-track {
             display: flex;
-            gap: 60px;
             animation-timing-function: linear;
             animation-iteration-count: infinite;
             will-change: transform;
             width: max-content;
+        }
+
+        .card-set {
+            display: flex;
+            gap: 60px;
         }
 
         .sliding-track.paused {
@@ -368,120 +372,163 @@
             <!-- Row 1: Left to Right -->
             <div class="card-row">
                 <div class="sliding-track">
-                    <!-- Eon Card -->
-                    <div class="premium-card-container">
-                        <div class="premium-card" data-system="eon">
-                            <div class="card-face card-front">
-                                <h3 class="card-title">Eon Lite</h3>
-                                <p class="card-subtitle">Email Intelligence System</p>
+                    <div class="card-set">
+                        <!-- Eon Card -->
+                        <div class="premium-card-container">
+                            <div class="premium-card" data-system="eon">
+                                <div class="card-face card-front">
+                                    <h3 class="card-title">Eon Lite</h3>
+                                    <p class="card-subtitle">Email Intelligence System</p>
+                                </div>
+                                <div class="card-face card-back">
+                                    <h3 class="card-back-title">Eon Lite</h3>
+                                    <p class="card-back-text">Smart email automation with AI-powered responses</p>
+                                    <ul class="card-specs">
+                                        <li>Python Backend</li>
+                                        <li>FAISS Vector DB</li>
+                                        <li>Gemini 1.5 Pro</li>
+                                        <li>Docker Deploy</li>
+                                    </ul>
+                                </div>
                             </div>
-                            <div class="card-face card-back">
-                                <h3 class="card-back-title">Eon Lite</h3>
-                                <p class="card-back-text">Smart email automation with AI-powered responses</p>
-                                <ul class="card-specs">
-                                    <li>Python Backend</li>
-                                    <li>FAISS Vector DB</li>
-                                    <li>Gemini 1.5 Pro</li>
-                                    <li>Docker Deploy</li>
-                                </ul>
+                        </div>
+
+                        <!-- TplBot Card -->
+                        <div class="premium-card-container">
+                            <div class="premium-card" data-system="tplbot">
+                                <div class="card-face card-front">
+                                    <h3 class="card-title">TplBot</h3>
+                                    <p class="card-subtitle">AI Support Chat</p>
+                                </div>
+                                <div class="card-face card-back">
+                                    <h3 class="card-back-title">TplBot</h3>
+                                    <p class="card-back-text">Intelligent conversational AI for customer support</p>
+                                    <ul class="card-specs">
+                                        <li>FastAPI Framework</li>
+                                        <li>OpenAI & Gemini</li>
+                                        <li>Redis Vector Store</li>
+                                        <li>WhatsApp Integration</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- HR Agent Card -->
+                        <div class="premium-card-container">
+                            <div class="premium-card" data-system="hr">
+                                <div class="card-face card-front">
+                                    <h3 class="card-title">HR Agent</h3>
+                                    <p class="card-subtitle">People Ops Automation</p>
+                                </div>
+                                <div class="card-face card-back">
+                                    <h3 class="card-back-title">HR Agent</h3>
+                                    <p class="card-back-text">Streamlined HR workflows and automation</p>
+                                    <ul class="card-specs">
+                                        <li>LangChain Agents</li>
+                                        <li>Slack Integration</li>
+                                        <li>Google Workspace</li>
+                                        <li>Policy Knowledge Base</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Opsidon Card -->
+                        <div class="premium-card-container">
+                            <div class="premium-card" data-system="opsidon">
+                                <div class="card-face card-front">
+                                    <h3 class="card-title">Opsidon</h3>
+                                    <p class="card-subtitle">Enterprise Ops AI</p>
+                                </div>
+                                <div class="card-face card-back">
+                                    <h3 class="card-back-title">Opsidon</h3>
+                                    <p class="card-back-text">Enterprise-grade AI for complex operations</p>
+                                    <ul class="card-specs">
+                                        <li>Custom Agent Framework</li>
+                                        <li>Event-driven Processing</li>
+                                        <li>Multi-cloud Support</li>
+                                        <li>Self-healing Systems</li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
                     </div>
 
-                    <!-- TplBot Card -->
-                    <div class="premium-card-container">
-                        <div class="premium-card" data-system="tplbot">
-                            <div class="card-face card-front">
-                                <h3 class="card-title">TplBot</h3>
-                                <p class="card-subtitle">AI Support Chat</p>
-                            </div>
-                            <div class="card-face card-back">
-                                <h3 class="card-back-title">TplBot</h3>
-                                <p class="card-back-text">Intelligent conversational AI for customer support</p>
-                                <ul class="card-specs">
-                                    <li>FastAPI Framework</li>
-                                    <li>OpenAI & Gemini</li>
-                                    <li>Redis Vector Store</li>
-                                    <li>WhatsApp Integration</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- HR Agent Card -->
-                    <div class="premium-card-container">
-                        <div class="premium-card" data-system="hr">
-                            <div class="card-face card-front">
-                                <h3 class="card-title">HR Agent</h3>
-                                <p class="card-subtitle">People Ops Automation</p>
-                            </div>
-                            <div class="card-face card-back">
-                                <h3 class="card-back-title">HR Agent</h3>
-                                <p class="card-back-text">Streamlined HR workflows and automation</p>
-                                <ul class="card-specs">
-                                    <li>LangChain Agents</li>
-                                    <li>Slack Integration</li>
-                                    <li>Google Workspace</li>
-                                    <li>Policy Knowledge Base</li>
-                                </ul>
+                    <div class="card-set" aria-hidden="true">
+                        <!-- Duplicate set -->
+                        <div class="premium-card-container">
+                            <div class="premium-card" data-system="eon">
+                                <div class="card-face card-front">
+                                    <h3 class="card-title">Eon Lite</h3>
+                                    <p class="card-subtitle">Email Intelligence System</p>
+                                </div>
+                                <div class="card-face card-back">
+                                    <h3 class="card-back-title">Eon Lite</h3>
+                                    <p class="card-back-text">Smart email automation with AI-powered responses</p>
+                                    <ul class="card-specs">
+                                        <li>Python Backend</li>
+                                        <li>FAISS Vector DB</li>
+                                        <li>Gemini 1.5 Pro</li>
+                                        <li>Docker Deploy</li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
-                    </div>
 
-                    <!-- Duplicate set for endless loop -->
-                    <div class="premium-card-container">
-                        <div class="premium-card" data-system="eon">
-                            <div class="card-face card-front">
-                                <h3 class="card-title">Eon Lite</h3>
-                                <p class="card-subtitle">Email Intelligence System</p>
-                            </div>
-                            <div class="card-face card-back">
-                                <h3 class="card-back-title">Eon Lite</h3>
-                                <p class="card-back-text">Smart email automation with AI-powered responses</p>
-                                <ul class="card-specs">
-                                    <li>Python Backend</li>
-                                    <li>FAISS Vector DB</li>
-                                    <li>Gemini 1.5 Pro</li>
-                                    <li>Docker Deploy</li>
-                                </ul>
+                        <div class="premium-card-container">
+                            <div class="premium-card" data-system="tplbot">
+                                <div class="card-face card-front">
+                                    <h3 class="card-title">TplBot</h3>
+                                    <p class="card-subtitle">AI Support Chat</p>
+                                </div>
+                                <div class="card-face card-back">
+                                    <h3 class="card-back-title">TplBot</h3>
+                                    <p class="card-back-text">Intelligent conversational AI for customer support</p>
+                                    <ul class="card-specs">
+                                        <li>FastAPI Framework</li>
+                                        <li>OpenAI & Gemini</li>
+                                        <li>Redis Vector Store</li>
+                                        <li>WhatsApp Integration</li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
-                    </div>
 
-                    <div class="premium-card-container">
-                        <div class="premium-card" data-system="tplbot">
-                            <div class="card-face card-front">
-                                <h3 class="card-title">TplBot</h3>
-                                <p class="card-subtitle">AI Support Chat</p>
-                            </div>
-                            <div class="card-face card-back">
-                                <h3 class="card-back-title">TplBot</h3>
-                                <p class="card-back-text">Intelligent conversational AI for customer support</p>
-                                <ul class="card-specs">
-                                    <li>FastAPI Framework</li>
-                                    <li>OpenAI & Gemini</li>
-                                    <li>Redis Vector Store</li>
-                                    <li>WhatsApp Integration</li>
-                                </ul>
+                        <div class="premium-card-container">
+                            <div class="premium-card" data-system="hr">
+                                <div class="card-face card-front">
+                                    <h3 class="card-title">HR Agent</h3>
+                                    <p class="card-subtitle">People Ops Automation</p>
+                                </div>
+                                <div class="card-face card-back">
+                                    <h3 class="card-back-title">HR Agent</h3>
+                                    <p class="card-back-text">Streamlined HR workflows and automation</p>
+                                    <ul class="card-specs">
+                                        <li>LangChain Agents</li>
+                                        <li>Slack Integration</li>
+                                        <li>Google Workspace</li>
+                                        <li>Policy Knowledge Base</li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
-                    </div>
 
-                    <div class="premium-card-container">
-                        <div class="premium-card" data-system="hr">
-                            <div class="card-face card-front">
-                                <h3 class="card-title">HR Agent</h3>
-                                <p class="card-subtitle">People Ops Automation</p>
-                            </div>
-                            <div class="card-face card-back">
-                                <h3 class="card-back-title">HR Agent</h3>
-                                <p class="card-back-text">Streamlined HR workflows and automation</p>
-                                <ul class="card-specs">
-                                    <li>LangChain Agents</li>
-                                    <li>Slack Integration</li>
-                                    <li>Google Workspace</li>
-                                    <li>Policy Knowledge Base</li>
-                                </ul>
+                        <div class="premium-card-container">
+                            <div class="premium-card" data-system="opsidon">
+                                <div class="card-face card-front">
+                                    <h3 class="card-title">Opsidon</h3>
+                                    <p class="card-subtitle">Enterprise Ops AI</p>
+                                </div>
+                                <div class="card-face card-back">
+                                    <h3 class="card-back-title">Opsidon</h3>
+                                    <p class="card-back-text">Enterprise-grade AI for complex operations</p>
+                                    <ul class="card-specs">
+                                        <li>Custom Agent Framework</li>
+                                        <li>Event-driven Processing</li>
+                                        <li>Multi-cloud Support</li>
+                                        <li>Self-healing Systems</li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -491,119 +538,163 @@
             <!-- Row 2: Right to Left -->
             <div class="card-row">
                 <div class="sliding-track">
-                    <!-- Opsidon Card -->
-                    <div class="premium-card-container">
-                        <div class="premium-card" data-system="opsidon">
-                            <div class="card-face card-front">
-                                <h3 class="card-title">Opsidon</h3>
-                                <p class="card-subtitle">Enterprise Ops AI</p>
+                    <div class="card-set">
+                        <!-- Opsidon Card -->
+                        <div class="premium-card-container">
+                            <div class="premium-card" data-system="opsidon">
+                                <div class="card-face card-front">
+                                    <h3 class="card-title">Opsidon</h3>
+                                    <p class="card-subtitle">Enterprise Ops AI</p>
+                                </div>
+                                <div class="card-face card-back">
+                                    <h3 class="card-back-title">Opsidon</h3>
+                                    <p class="card-back-text">Enterprise-grade AI for complex operations</p>
+                                    <ul class="card-specs">
+                                        <li>Custom Agent Framework</li>
+                                        <li>Event-driven Processing</li>
+                                        <li>Multi-cloud Support</li>
+                                        <li>Self-healing Systems</li>
+                                    </ul>
+                                </div>
                             </div>
-                            <div class="card-face card-back">
-                                <h3 class="card-back-title">Opsidon</h3>
-                                <p class="card-back-text">Enterprise-grade AI for complex operations</p>
-                                <ul class="card-specs">
-                                    <li>Custom Agent Framework</li>
-                                    <li>Event-driven Processing</li>
-                                    <li>Multi-cloud Support</li>
-                                    <li>Self-healing Systems</li>
-                                </ul>
+                        </div>
+
+                        <!-- Eon Card -->
+                        <div class="premium-card-container">
+                            <div class="premium-card" data-system="eon">
+                                <div class="card-face card-front">
+                                    <h3 class="card-title">Eon Lite</h3>
+                                    <p class="card-subtitle">Email Intelligence System</p>
+                                </div>
+                                <div class="card-face card-back">
+                                    <h3 class="card-back-title">Eon Lite</h3>
+                                    <p class="card-back-text">Smart email automation with AI-powered responses</p>
+                                    <ul class="card-specs">
+                                        <li>Python Backend</li>
+                                        <li>FAISS Vector DB</li>
+                                        <li>Gemini 1.5 Pro</li>
+                                        <li>Docker Deploy</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- TplBot Card -->
+                        <div class="premium-card-container">
+                            <div class="premium-card" data-system="tplbot">
+                                <div class="card-face card-front">
+                                    <h3 class="card-title">TplBot</h3>
+                                    <p class="card-subtitle">AI Support Chat</p>
+                                </div>
+                                <div class="card-face card-back">
+                                    <h3 class="card-back-title">TplBot</h3>
+                                    <p class="card-back-text">Intelligent conversational AI for customer support</p>
+                                    <ul class="card-specs">
+                                        <li>FastAPI Framework</li>
+                                        <li>OpenAI & Gemini</li>
+                                        <li>Redis Vector Store</li>
+                                        <li>WhatsApp Integration</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- HR Agent Card -->
+                        <div class="premium-card-container">
+                            <div class="premium-card" data-system="hr">
+                                <div class="card-face card-front">
+                                    <h3 class="card-title">HR Agent</h3>
+                                    <p class="card-subtitle">People Ops Automation</p>
+                                </div>
+                                <div class="card-face card-back">
+                                    <h3 class="card-back-title">HR Agent</h3>
+                                    <p class="card-back-text">Streamlined HR workflows and automation</p>
+                                    <ul class="card-specs">
+                                        <li>LangChain Agents</li>
+                                        <li>Slack Integration</li>
+                                        <li>Google Workspace</li>
+                                        <li>Policy Knowledge Base</li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Duplicate Cards for loop -->
-                    <div class="premium-card-container">
-                        <div class="premium-card" data-system="eon">
-                            <div class="card-face card-front">
-                                <h3 class="card-title">Eon Lite</h3>
-                                <p class="card-subtitle">Email Intelligence System</p>
-                            </div>
-                            <div class="card-face card-back">
-                                <h3 class="card-back-title">Eon Lite</h3>
-                                <p class="card-back-text">Smart email automation with AI-powered responses</p>
-                                <ul class="card-specs">
-                                    <li>Python Backend</li>
-                                    <li>FAISS Vector DB</li>
-                                    <li>Gemini 1.5 Pro</li>
-                                    <li>Docker Deploy</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="premium-card-container">
-                        <div class="premium-card" data-system="tplbot">
-                            <div class="card-face card-front">
-                                <h3 class="card-title">TplBot</h3>
-                                <p class="card-subtitle">AI Support Chat</p>
-                            </div>
-                            <div class="card-face card-back">
-                                <h3 class="card-back-title">TplBot</h3>
-                                <p class="card-back-text">Intelligent conversational AI for customer support</p>
-                                <ul class="card-specs">
-                                    <li>FastAPI Framework</li>
-                                    <li>OpenAI & Gemini</li>
-                                    <li>Redis Vector Store</li>
-                                    <li>WhatsApp Integration</li>
-                                </ul>
+                    <div class="card-set" aria-hidden="true">
+                        <!-- Duplicate set -->
+                        <div class="premium-card-container">
+                            <div class="premium-card" data-system="opsidon">
+                                <div class="card-face card-front">
+                                    <h3 class="card-title">Opsidon</h3>
+                                    <p class="card-subtitle">Enterprise Ops AI</p>
+                                </div>
+                                <div class="card-face card-back">
+                                    <h3 class="card-back-title">Opsidon</h3>
+                                    <p class="card-back-text">Enterprise-grade AI for complex operations</p>
+                                    <ul class="card-specs">
+                                        <li>Custom Agent Framework</li>
+                                        <li>Event-driven Processing</li>
+                                        <li>Multi-cloud Support</li>
+                                        <li>Self-healing Systems</li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
-                    </div>
 
-                    <!-- Second set -->
-                    <div class="premium-card-container">
-                        <div class="premium-card" data-system="opsidon">
-                            <div class="card-face card-front">
-                                <h3 class="card-title">Opsidon</h3>
-                                <p class="card-subtitle">Enterprise Ops AI</p>
-                            </div>
-                            <div class="card-face card-back">
-                                <h3 class="card-back-title">Opsidon</h3>
-                                <p class="card-back-text">Enterprise-grade AI for complex operations</p>
-                                <ul class="card-specs">
-                                    <li>Custom Agent Framework</li>
-                                    <li>Event-driven Processing</li>
-                                    <li>Multi-cloud Support</li>
-                                    <li>Self-healing Systems</li>
-                                </ul>
+                        <div class="premium-card-container">
+                            <div class="premium-card" data-system="eon">
+                                <div class="card-face card-front">
+                                    <h3 class="card-title">Eon Lite</h3>
+                                    <p class="card-subtitle">Email Intelligence System</p>
+                                </div>
+                                <div class="card-face card-back">
+                                    <h3 class="card-back-title">Eon Lite</h3>
+                                    <p class="card-back-text">Smart email automation with AI-powered responses</p>
+                                    <ul class="card-specs">
+                                        <li>Python Backend</li>
+                                        <li>FAISS Vector DB</li>
+                                        <li>Gemini 1.5 Pro</li>
+                                        <li>Docker Deploy</li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
-                    </div>
 
-                    <div class="premium-card-container">
-                        <div class="premium-card" data-system="eon">
-                            <div class="card-face card-front">
-                                <h3 class="card-title">Eon Lite</h3>
-                                <p class="card-subtitle">Email Intelligence System</p>
-                            </div>
-                            <div class="card-face card-back">
-                                <h3 class="card-back-title">Eon Lite</h3>
-                                <p class="card-back-text">Smart email automation with AI-powered responses</p>
-                                <ul class="card-specs">
-                                    <li>Python Backend</li>
-                                    <li>FAISS Vector DB</li>
-                                    <li>Gemini 1.5 Pro</li>
-                                    <li>Docker Deploy</li>
-                                </ul>
+                        <div class="premium-card-container">
+                            <div class="premium-card" data-system="tplbot">
+                                <div class="card-face card-front">
+                                    <h3 class="card-title">TplBot</h3>
+                                    <p class="card-subtitle">AI Support Chat</p>
+                                </div>
+                                <div class="card-face card-back">
+                                    <h3 class="card-back-title">TplBot</h3>
+                                    <p class="card-back-text">Intelligent conversational AI for customer support</p>
+                                    <ul class="card-specs">
+                                        <li>FastAPI Framework</li>
+                                        <li>OpenAI & Gemini</li>
+                                        <li>Redis Vector Store</li>
+                                        <li>WhatsApp Integration</li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
-                    </div>
 
-                    <div class="premium-card-container">
-                        <div class="premium-card" data-system="tplbot">
-                            <div class="card-face card-front">
-                                <h3 class="card-title">TplBot</h3>
-                                <p class="card-subtitle">AI Support Chat</p>
-                            </div>
-                            <div class="card-face card-back">
-                                <h3 class="card-back-title">TplBot</h3>
-                                <p class="card-back-text">Intelligent conversational AI for customer support</p>
-                                <ul class="card-specs">
-                                    <li>FastAPI Framework</li>
-                                    <li>OpenAI & Gemini</li>
-                                    <li>Redis Vector Store</li>
-                                    <li>WhatsApp Integration</li>
-                                </ul>
+                        <div class="premium-card-container">
+                            <div class="premium-card" data-system="hr">
+                                <div class="card-face card-front">
+                                    <h3 class="card-title">HR Agent</h3>
+                                    <p class="card-subtitle">People Ops Automation</p>
+                                </div>
+                                <div class="card-face card-back">
+                                    <h3 class="card-back-title">HR Agent</h3>
+                                    <p class="card-back-text">Streamlined HR workflows and automation</p>
+                                    <ul class="card-specs">
+                                        <li>LangChain Agents</li>
+                                        <li>Slack Integration</li>
+                                        <li>Google Workspace</li>
+                                        <li>Policy Knowledge Base</li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -613,120 +704,163 @@
             <!-- Row 3: Left to Right -->
             <div class="card-row">
                 <div class="sliding-track">
-                    <!-- HR Agent Card -->
-                    <div class="premium-card-container">
-                        <div class="premium-card" data-system="hr">
-                            <div class="card-face card-front">
-                                <h3 class="card-title">HR Agent</h3>
-                                <p class="card-subtitle">People Ops Automation</p>
+                    <div class="card-set">
+                        <!-- HR Agent Card -->
+                        <div class="premium-card-container">
+                            <div class="premium-card" data-system="hr">
+                                <div class="card-face card-front">
+                                    <h3 class="card-title">HR Agent</h3>
+                                    <p class="card-subtitle">People Ops Automation</p>
+                                </div>
+                                <div class="card-face card-back">
+                                    <h3 class="card-back-title">HR Agent</h3>
+                                    <p class="card-back-text">Streamlined HR workflows and automation</p>
+                                    <ul class="card-specs">
+                                        <li>LangChain Agents</li>
+                                        <li>Slack Integration</li>
+                                        <li>Google Workspace</li>
+                                        <li>Policy Knowledge Base</li>
+                                    </ul>
+                                </div>
                             </div>
-                            <div class="card-face card-back">
-                                <h3 class="card-back-title">HR Agent</h3>
-                                <p class="card-back-text">Streamlined HR workflows and automation</p>
-                                <ul class="card-specs">
-                                    <li>LangChain Agents</li>
-                                    <li>Slack Integration</li>
-                                    <li>Google Workspace</li>
-                                    <li>Policy Knowledge Base</li>
-                                </ul>
+                        </div>
+
+                        <!-- Opsidon Card -->
+                        <div class="premium-card-container">
+                            <div class="premium-card" data-system="opsidon">
+                                <div class="card-face card-front">
+                                    <h3 class="card-title">Opsidon</h3>
+                                    <p class="card-subtitle">Enterprise Ops AI</p>
+                                </div>
+                                <div class="card-face card-back">
+                                    <h3 class="card-back-title">Opsidon</h3>
+                                    <p class="card-back-text">Enterprise-grade AI for complex operations</p>
+                                    <ul class="card-specs">
+                                        <li>Custom Agent Framework</li>
+                                        <li>Event-driven Processing</li>
+                                        <li>Multi-cloud Support</li>
+                                        <li>Self-healing Systems</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Eon Card -->
+                        <div class="premium-card-container">
+                            <div class="premium-card" data-system="eon">
+                                <div class="card-face card-front">
+                                    <h3 class="card-title">Eon Lite</h3>
+                                    <p class="card-subtitle">Email Intelligence System</p>
+                                </div>
+                                <div class="card-face card-back">
+                                    <h3 class="card-back-title">Eon Lite</h3>
+                                    <p class="card-back-text">Smart email automation with AI-powered responses</p>
+                                    <ul class="card-specs">
+                                        <li>Python Backend</li>
+                                        <li>FAISS Vector DB</li>
+                                        <li>Gemini 1.5 Pro</li>
+                                        <li>Docker Deploy</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- TplBot Card -->
+                        <div class="premium-card-container">
+                            <div class="premium-card" data-system="tplbot">
+                                <div class="card-face card-front">
+                                    <h3 class="card-title">TplBot</h3>
+                                    <p class="card-subtitle">AI Support Chat</p>
+                                </div>
+                                <div class="card-face card-back">
+                                    <h3 class="card-back-title">TplBot</h3>
+                                    <p class="card-back-text">Intelligent conversational AI for customer support</p>
+                                    <ul class="card-specs">
+                                        <li>FastAPI Framework</li>
+                                        <li>OpenAI & Gemini</li>
+                                        <li>Redis Vector Store</li>
+                                        <li>WhatsApp Integration</li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Opsidon Card -->
-                    <div class="premium-card-container">
-                        <div class="premium-card" data-system="opsidon">
-                            <div class="card-face card-front">
-                                <h3 class="card-title">Opsidon</h3>
-                                <p class="card-subtitle">Enterprise Ops AI</p>
-                            </div>
-                            <div class="card-face card-back">
-                                <h3 class="card-back-title">Opsidon</h3>
-                                <p class="card-back-text">Enterprise-grade AI for complex operations</p>
-                                <ul class="card-specs">
-                                    <li>Custom Agent Framework</li>
-                                    <li>Event-driven Processing</li>
-                                    <li>Multi-cloud Support</li>
-                                    <li>Self-healing Systems</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Eon Card -->
-                    <div class="premium-card-container">
-                        <div class="premium-card" data-system="eon">
-                            <div class="card-face card-front">
-                                <h3 class="card-title">Eon Lite</h3>
-                                <p class="card-subtitle">Email Intelligence System</p>
-                            </div>
-                            <div class="card-face card-back">
-                                <h3 class="card-back-title">Eon Lite</h3>
-                                <p class="card-back-text">Smart email automation with AI-powered responses</p>
-                                <ul class="card-specs">
-                                    <li>Python Backend</li>
-                                    <li>FAISS Vector DB</li>
-                                    <li>Gemini 1.5 Pro</li>
-                                    <li>Docker Deploy</li>
-                                </ul>
+                    <div class="card-set" aria-hidden="true">
+                        <!-- Duplicate set -->
+                        <div class="premium-card-container">
+                            <div class="premium-card" data-system="hr">
+                                <div class="card-face card-front">
+                                    <h3 class="card-title">HR Agent</h3>
+                                    <p class="card-subtitle">People Ops Automation</p>
+                                </div>
+                                <div class="card-face card-back">
+                                    <h3 class="card-back-title">HR Agent</h3>
+                                    <p class="card-back-text">Streamlined HR workflows and automation</p>
+                                    <ul class="card-specs">
+                                        <li>LangChain Agents</li>
+                                        <li>Slack Integration</li>
+                                        <li>Google Workspace</li>
+                                        <li>Policy Knowledge Base</li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
-                    </div>
 
-                    <!-- Duplicate set -->
-                    <div class="premium-card-container">
-                        <div class="premium-card" data-system="hr">
-                            <div class="card-face card-front">
-                                <h3 class="card-title">HR Agent</h3>
-                                <p class="card-subtitle">People Ops Automation</p>
-                            </div>
-                            <div class="card-face card-back">
-                                <h3 class="card-back-title">HR Agent</h3>
-                                <p class="card-back-text">Streamlined HR workflows and automation</p>
-                                <ul class="card-specs">
-                                    <li>LangChain Agents</li>
-                                    <li>Slack Integration</li>
-                                    <li>Google Workspace</li>
-                                    <li>Policy Knowledge Base</li>
-                                </ul>
+                        <div class="premium-card-container">
+                            <div class="premium-card" data-system="opsidon">
+                                <div class="card-face card-front">
+                                    <h3 class="card-title">Opsidon</h3>
+                                    <p class="card-subtitle">Enterprise Ops AI</p>
+                                </div>
+                                <div class="card-face card-back">
+                                    <h3 class="card-back-title">Opsidon</h3>
+                                    <p class="card-back-text">Enterprise-grade AI for complex operations</p>
+                                    <ul class="card-specs">
+                                        <li>Custom Agent Framework</li>
+                                        <li>Event-driven Processing</li>
+                                        <li>Multi-cloud Support</li>
+                                        <li>Self-healing Systems</li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
-                    </div>
 
-                    <div class="premium-card-container">
-                        <div class="premium-card" data-system="opsidon">
-                            <div class="card-face card-front">
-                                <h3 class="card-title">Opsidon</h3>
-                                <p class="card-subtitle">Enterprise Ops AI</p>
-                            </div>
-                            <div class="card-face card-back">
-                                <h3 class="card-back-title">Opsidon</h3>
-                                <p class="card-back-text">Enterprise-grade AI for complex operations</p>
-                                <ul class="card-specs">
-                                    <li>Custom Agent Framework</li>
-                                    <li>Event-driven Processing</li>
-                                    <li>Multi-cloud Support</li>
-                                    <li>Self-healing Systems</li>
-                                </ul>
+                        <div class="premium-card-container">
+                            <div class="premium-card" data-system="eon">
+                                <div class="card-face card-front">
+                                    <h3 class="card-title">Eon Lite</h3>
+                                    <p class="card-subtitle">Email Intelligence System</p>
+                                </div>
+                                <div class="card-face card-back">
+                                    <h3 class="card-back-title">Eon Lite</h3>
+                                    <p class="card-back-text">Smart email automation with AI-powered responses</p>
+                                    <ul class="card-specs">
+                                        <li>Python Backend</li>
+                                        <li>FAISS Vector DB</li>
+                                        <li>Gemini 1.5 Pro</li>
+                                        <li>Docker Deploy</li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
-                    </div>
 
-                    <div class="premium-card-container">
-                        <div class="premium-card" data-system="eon">
-                            <div class="card-face card-front">
-                                <h3 class="card-title">Eon Lite</h3>
-                                <p class="card-subtitle">Email Intelligence System</p>
-                            </div>
-                            <div class="card-face card-back">
-                                <h3 class="card-back-title">Eon Lite</h3>
-                                <p class="card-back-text">Smart email automation with AI-powered responses</p>
-                                <ul class="card-specs">
-                                    <li>Python Backend</li>
-                                    <li>FAISS Vector DB</li>
-                                    <li>Gemini 1.5 Pro</li>
-                                    <li>Docker Deploy</li>
-                                </ul>
+                        <div class="premium-card-container">
+                            <div class="premium-card" data-system="tplbot">
+                                <div class="card-face card-front">
+                                    <h3 class="card-title">TplBot</h3>
+                                    <p class="card-subtitle">AI Support Chat</p>
+                                </div>
+                                <div class="card-face card-back">
+                                    <h3 class="card-back-title">TplBot</h3>
+                                    <p class="card-back-text">Intelligent conversational AI for customer support</p>
+                                    <ul class="card-specs">
+                                        <li>FastAPI Framework</li>
+                                        <li>OpenAI & Gemini</li>
+                                        <li>Redis Vector Store</li>
+                                        <li>WhatsApp Integration</li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
                     </div>
