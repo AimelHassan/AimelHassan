@@ -71,6 +71,7 @@
             animation-timing-function: linear;
             animation-iteration-count: infinite;
             will-change: transform;
+            width: max-content;
         }
 
         .sliding-track.paused {
@@ -79,34 +80,34 @@
 
         /* Row 1: Left to Right */
         .card-row:nth-child(1) .sliding-track {
-            animation: slideLeftToRight 30s linear infinite;
+            animation: scrollLTR 30s linear infinite;
         }
 
         /* Row 2: Right to Left */
         .card-row:nth-child(2) .sliding-track {
-            animation: slideRightToLeft 35s linear infinite;
+            animation: scrollRTL 35s linear infinite;
         }
 
         /* Row 3: Left to Right */
         .card-row:nth-child(3) .sliding-track {
-            animation: slideLeftToRight 40s linear infinite;
+            animation: scrollLTR 40s linear infinite;
         }
 
-        @keyframes slideLeftToRight {
-            0% {
-                transform: translateX(-100%);
+        @keyframes scrollLTR {
+            from {
+                transform: translateX(-50%);
             }
-            100% {
-                transform: translateX(100vw);
+            to {
+                transform: translateX(0);
             }
         }
 
-        @keyframes slideRightToLeft {
-            0% {
-                transform: translateX(100vw);
+        @keyframes scrollRTL {
+            from {
+                transform: translateX(0);
             }
-            100% {
-                transform: translateX(-100%);
+            to {
+                transform: translateX(-50%);
             }
         }
 
