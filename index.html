@@ -151,7 +151,7 @@
             backface-visibility: hidden;
             border-radius: 18px;
             overflow: hidden;
-            background: radial-gradient(circle at var(--rx) var(--ry),rgb(20, 20, 20) 0%,transparent 55%), linear-gradient(var(--angle),#070707 0%, rgb(27, 27, 27) 45%,#050505 100%);
+            background: radial-gradient(circle at var(--rx) var(--ry),rgb(20, 20, 20) 0%,#0a0a0a 55%), linear-gradient(var(--angle),#070707 0%, rgb(27, 27, 27) 45%,#050505 100%);
             box-shadow: 0 20px 40px rgba(0,0,0,.78), inset 0 2px 4px rgba(0, 0, 0, 0.05), inset 0 -2px 4px rgba(0,0,0,.65);
         }
 
@@ -1631,6 +1631,19 @@
         const closeBtn = document.getElementById('closeBtn');
         const modalContent = document.getElementById('modalContent');
         const slidingTracks = document.querySelectorAll('.sliding-track');
+
+// Duplicate cards to extend each row
+        slidingTracks.forEach(track => {
+            const sets = track.querySelectorAll('.card-set');
+            if (sets.length > 1) {
+                const cards = sets[0].children;
+                [...cards].forEach(card => {
+                    sets[0].appendChild(card.cloneNode(true));
+                    sets[1].appendChild(card.cloneNode(true));
+                });
+            }
+        });
+
 
         // Pause animations on hover
         pcards.forEach(card => {
